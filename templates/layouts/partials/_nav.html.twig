@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
   <div class="container">
-    <a class="navbar-brand" href="#">Startup</a>
+    <a class="navbar-brand" href="{{path('app_home')}}">Startup</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,7 +17,9 @@
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('logout') }}">
           </form>
         {% else %}
-         
+          <li class="nav-item">
+            <a class="nav-link" href="{{ path('app_register') }}">Register</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ path('app_login') }}">Login</a>
           </li>
